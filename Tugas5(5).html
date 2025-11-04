@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+   <style> :root {
+     --gap: 1rem;
+ }
+
+ body {
+     font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+     line-height: 1.5;
+     margin: 0;
+     background: #f7f7f8;
+     color: #222;
+ }
+
+ header,
+ main,
+ footer {
+     max-width: 900px;
+     margin: 0 auto;
+     padding: 0.75rem 1rem;
+     /* 🔹 Diperpendek padding */
+ }
+
+ header {
+     background: white;
+     border-bottom: 1px solid #e6e6e9;
+     position: sticky;
+     top: 0;
+     z-index: 10;
+ }
+
+ h1 {
+     margin: 0 0 .5rem;
+     font-size: 1.5rem;
+ }
+
+ section {
+     background: white;
+     border: 1px solid #e6e6e9;
+     border-radius: .75rem;
+     padding: 1rem 1.5rem;
+     margin: 0.75rem 0;
+     /* 🔹 Jarak antar section dikurangi */
+ }
+
+ fieldset {
+     border: 1px solid #dcdce0;
+     border-radius: .5rem;
+     padding: 1rem 1.25rem;
+     margin-bottom: 1rem;
+ }
+
+ legend {
+     padding: 0 .5rem;
+     font-weight: 600;
+ }
+
+ .grid {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: var(--gap);
+ }
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+ .row {
+     display: grid;
+     grid-template-columns: 180px 1fr;
+     align-items: center;
+     gap: .75rem;
+ }
+
+ label {
+     font-weight: 600;
+ }
+
+ input[type="text"],
+ input[type="password"],
+ input[type="email"],
+ input[type="number"],
+ input[type="date"],
+ input[type="time"],
+ input[type="url"],
+ input[type="tel"],
+ input[type="search"],
+ input[type="color"],
+ input[type="file"],
+ select,
+ textarea,
+ input[type="range"] {
+     width: 100%;
+     max-width: 500px;
+     padding: .55rem .6rem;
+     border: 1px solid #cfd3d8;
+     border-radius: .5rem;
+     background: #fff;
+     box-sizing: border-box;
+ }
+
+ input[type="color"] {
+     padding: 0;
+     height: 2.25rem;
+ }
+
+ textarea {
+     min-height: 90px;
+ }
+
+ .actions {
+     display: flex;
+     gap: .75rem;
+     flex-wrap: wrap;
+     margin-top: .75rem;
+     /* 🔹 Diperpendek sedikit */
+ }
+
+ button,
+ input[type="submit"],
+ input[type="reset"] {
+     border: 1px solid #1e88e5;
+     background: #2196f3;
+     color: white;
+     padding: .6rem 1rem;
+     border-radius: .5rem;
+     cursor: pointer;
+ }
+
+ input[type="reset"] {
+     border-color: #9e9e9e;
+     background: #bdbdbd;
+ }
+
+ footer {
+     color: #666;
+     font-size: .9rem;
+     text-align: center;
+     padding-top: .5rem;
+     /* 🔹 Jarak atas footer diperpendek */
+ }
+
+ @media (max-width: 720px) {
+
+     header,
+     main,
+     footer {
+         padding: 0.75rem;
+     }
+
+     section {
+         padding: 1rem;
+         margin: 0.75rem 0.5rem;
+     }
+
+     fieldset {
+         padding: 1rem;
+     }
+
+     .row {
+         grid-template-columns: 1fr;
+         gap: .5rem;
+     }
+
+     input,
+     select,
+     textarea {
+         max-width: 100%;
+     }
+
+     .actions {
+         justify-content: center;
+     }
+ }
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+select {
+  width: 200px;
+}
+
+input[type="number"] {
+  width: 60px;
+  text-align: center;
+}
+
+.grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+ </style>
+</head>
+<body>
+  <main>
+    <section>
+      <form action="" method="" >
+        <label for=""> <h3>Order Form</h3></label>
+        <div class="grid">
+              <div>
+               <label>Name</label>
+          <input type="text" id="first" placeholder=" Julpa">
+        </div>
+        <div class="grid-2">
+        <div>
+          <label>Email</label>
+          <input type="email" id="email" placeholder="julpe@example.com">
+        </div>
+        <div>
+          <label>Phone</label>
+           <input type="tel" id="phone" placeholder="(+62 8888 2222 333 )">
+        </div>
+      </div>
+              <label for=""> <h4>Order Details</h4></label>
+
+          <div class="form-row">
+            <div>
+              <label for="product">Product</label><br>
+              <select id="product" name="product">
+                <option value="">Select a product</option>
+                <option value="polos">Kerudung Polos</option>
+                <option value="motif">Kerudung Motif</option>
+                <option value="premium">Kerudung Premium</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="quantity">Quantity</label><br>
+              <input type="number" id="quantity" name="quantity" value="1" min="1">
+            </div>
+          </div>
+        </fieldset>
+  <div class="checkbox-group">
+        <div class="checkbox-group">
+          <label><strong>Size</strong></label>
+          <label><input type="checkbox" name="size" value="small"> Small</label>
+          <label><input type="checkbox" name="size" value="medium"> Medium</label>
+          <label><input type="checkbox" name="size" value="large"> Large</label>
+          <label><input type="checkbox" name="size" value="xl"> XL</label>
+        </div>
+
+          <div class="checkbox-group">
+          <label><strong>Color</strong></label>
+          <label><input type="checkbox" name="color" value="red"> Red</label>
+          <label><input type="checkbox" name="color" value="green"> Green</label>
+          <label><input type="checkbox" name="color" value="blue"> Blue</label>
+          <label><input type="checkbox" name="color" value="black"> Black</label>
+        </div>
+      </div>
+ <div class="join-form">
+    <label for="reason">Additional comments </label></label>
+    <textarea id="reason" placeholder="Enter any additional comments or intruction" rows="5"></textarea>
+    <div class="row">
+        <div>
+        <label>Payment Menthod</label>
+       <select >
+         <option value="" disabled selected>Select a payment menthod</option>
+         <option>
+           cod
+         </option>
+         <option>
+           bank
+         </option>
+         <option>
+           gopay
+         </option>
+       </select>
+       </div>
+           <label class="agree">
+    <input type="checkbox" name="agree"> I accept the terms and conditions.
+  </label>
+       </div>
+       <div class="actions">
+  <button type="submit" class="btn-black">Submit order!</button>
+</div>
+      </form>
+    </section>
+  </main>
+  
+</body>
+</html>

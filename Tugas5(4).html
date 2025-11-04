@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+   <style> :root {
+     --gap: 1rem;
+ }
+
+ body {
+     font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+     line-height: 1.5;
+     margin: 0;
+     background: #f7f7f8;
+     color: #222;
+ }
+
+ header,
+ main,
+ footer {
+     max-width: 900px;
+     margin: 0 auto;
+     padding: 0.75rem 1rem;
+     /* 🔹 Diperpendek padding */
+ }
+
+ header {
+     background: white;
+     border-bottom: 1px solid #e6e6e9;
+     position: sticky;
+     top: 0;
+     z-index: 10;
+ }
+
+ h1 {
+     margin: 0 0 .5rem;
+     font-size: 1.5rem;
+ }
+
+ section {
+     background: white;
+     border: 1px solid #e6e6e9;
+     border-radius: .75rem;
+     padding: 1rem 1.5rem;
+     margin: 0.75rem 0;
+     /* 🔹 Jarak antar section dikurangi */
+ }
+
+ fieldset {
+     border: 1px solid #dcdce0;
+     border-radius: .5rem;
+     padding: 1rem 1.25rem;
+     margin-bottom: 1rem;
+ }
+
+ legend {
+     padding: 0 .5rem;
+     font-weight: 600;
+ }
+
+ .grid {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: var(--gap);
+ }
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 1rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-grid label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+}
+
+.agree {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+ .row {
+     display: grid;
+     grid-template-columns: 180px 1fr;
+     align-items: center;
+     gap: .75rem;
+ }
+
+ label {
+     font-weight: 600;
+ }
+
+ input[type="text"],
+ input[type="password"],
+ input[type="email"],
+ input[type="number"],
+ input[type="date"],
+ input[type="time"],
+ input[type="url"],
+ input[type="tel"],
+ input[type="search"],
+ input[type="color"],
+ input[type="file"],
+ select,
+ textarea,
+ input[type="range"] {
+     width: 100%;
+     max-width: 500px;
+     padding: .55rem .6rem;
+     border: 1px solid #cfd3d8;
+     border-radius: .5rem;
+     background: #fff;
+     box-sizing: border-box;
+ }
+
+ input[type="color"] {
+     padding: 0;
+     height: 2.25rem;
+ }
+
+ textarea {
+     min-height: 90px;
+ }
+
+ .hint {
+     color: #999;
+     font-size: 0.85rem;
+     font-style: italic;
+     margin-top: 4px;
+ }
+
+ .actions {
+     display: flex;
+     gap: .75rem;
+     flex-wrap: wrap;
+     margin-top: .75rem;
+     /* 🔹 Diperpendek sedikit */
+ }
+
+ button,
+ input[type="submit"],
+ input[type="reset"] {
+     border: 1px solid #1e88e5;
+     background: #2196f3;
+     color: white;
+     padding: .6rem 1rem;
+     border-radius: .5rem;
+     cursor: pointer;
+ }
+
+ input[type="reset"] {
+     border-color: #9e9e9e;
+     background: #bdbdbd;
+ }
+
+ footer {
+     color: #666;
+     font-size: .9rem;
+     text-align: center;
+     padding-top: .5rem;
+     /* 🔹 Jarak atas footer diperpendek */
+ }
+
+ @media (max-width: 720px) {
+
+     header,
+     main,
+     footer {
+         padding: 0.75rem;
+     }
+
+     section {
+         padding: 1rem;
+         margin: 0.75rem 0.5rem;
+     }
+
+     fieldset {
+         padding: 1rem;
+     }
+
+     .row {
+         grid-template-columns: 1fr;
+         gap: .5rem;
+     }
+
+     input,
+     select,
+     textarea {
+         max-width: 100%;
+     }
+
+     .actions {
+         justify-content: center;
+     }
+ }
+
+ </style>
+</head>
+<body>
+  <main>
+    <section>
+      <form action="" method="">
+        <label for=""> <h3>Event Registration Form</h3></label>
+             <p> please fill out the form below to become a volunteer.</p>
+                   <div class="grid-2">
+        <div>
+          <label>First Name</label>
+          <input type="text" id="first" placeholder="Enter your first name">
+        </div>
+        <div>
+          <label>Last Name</label>
+           <input type="text" id="last" placeholder="Enter your last name">
+        </div>
+      </div>
+       <div class="row">
+        <div>
+          <label>Email Address</label>
+           <input type="email" id="email" placeholder="Enter youe email address">
+        </div>
+                <div>
+          <label>Number Phone</label>
+           <input type="tel" id="phone" placeholder="(+62 8888 2222 333 )">
+        </div>
+        <div>
+     <label for="">Date of birth</label>
+       <input type="Date"placeholder=""required="">
+       </div>
+      </div>
+          <div class="row">
+        <div>
+        <label>Preferred Volunteer Role</label>
+       <select >
+         <option value="" disabled selected>Select your preferred volunteer role</option>
+         <option>
+           Indonesia
+         </option>
+         <option>
+           Cina
+         </option>
+         <option>
+           
+         </option>
+       </select>
+       </div>
+       <div>
+       <h3>Availability</h3>
+       <label>Days Available</label><br>
+        <small class="hint">Select a days you are available to volunteer</small>
+    <div class="checkbox-grid"> 
+    
+    <label><input type="checkbox" name="days" value="monday"> Monday</label>
+    <label><input type="checkbox" name="days" value="tuesday"> Tuesday</label>
+    <label><input type="checkbox" name="days" value="wednesday"> Wednesday</label>
+    <label><input type="checkbox" name="days" value="thursday"> Thursday</label>
+    <label><input type="checkbox" name="days" value="friday"> Friday</label>
+    <label><input type="checkbox" name="days" value="saturday"> Saturday</label>
+  </div>
+  </div>
+   <div class="grid-2">
+     <div>
+          <label>Available  Start Time</label>
+          <input type="number" id="time" placeholder="09:00 am">
+     </div>
+        <div>
+          <label>Available  End Time</label>
+           <input type="number" id="time" placeholder="17:00 am">
+        </div>
+   </div>
+    <div class="join-form">
+      <h3>Skills and Interests</h3>
+    <label for="reason">Skills And Experience </label></label>
+    <textarea id="reason" placeholder="Enter your skills and experience" rows="5"></textarea>
+              <small class="hint">Please describe your skill and experience,if any,that would be relevant to the volunteer role.</small>
+    </div>
+          <div class="checkbox-grid">
+          <label>Intereserts</label> <br>
+          <small class="hint"> select your interests</small>
+  <div>
+        <label><input type="checkbox" name="interests" value="Animals"> Animals</label>
+    <label><input type="checkbox" name="interests" value="Elderly"> Elderly</label>
+    <label><input type="checkbox" name="interests" value="Healty"> Healty</label>
+    <label><input type="checkbox" name="interests" value="poverty"> poverty</label>
+    <label><input type="checkbox" name="interests" value="Children"> Children</label>
+   
+    <label><input type="checkbox" name="interests" value="Homelessness"> Homelessness</label>
+  </div>
+  </div>
+    <label class="agree">
+    <input type="checkbox" name="agree"> I agree to the terms and conditions of the volunteer program.
+  </label>
+       </div>
+       <div class="actions">
+  <button type="submit" class="btn-black">Submit!</button>
+</div>
+      </form>
+    </section>
+  </main>
+  
+</body>
+</html>

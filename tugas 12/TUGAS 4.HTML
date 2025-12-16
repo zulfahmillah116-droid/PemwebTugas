@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop 4 - jQuery Effects</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      width: 360px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    h3 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    #box {
+      background-color: #e3f2fd;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+
+    button {
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      margin: 4px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    #fadeOut {
+      background-color: #f44336;
+      color: white;
+    }
+
+    #fadeIn {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    #slideUp {
+      background-color: #ff9800;
+      color: white;
+    }
+
+    #slideDown {
+      background-color: #2196f3;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h3>jQuery Effects Demo</h3>
+
+    <!-- STRUKTUR SESUAI TASK -->
+    <p id="box">Ini adalah paragraf efek jQuery.</p>
+
+    <button id="fadeOut">Fade Out</button>
+    <button id="fadeIn">Fade In</button>
+    <button id="slideUp">Slide Up</button>
+    <button id="slideDown">Slide Down</button>
+  </div>
+
+  <!-- LOGIKA SESUAI TASK -->
+  <script>
+    $(function () {
+      $("#fadeOut").click(() => $("#box").fadeOut());
+      $("#fadeIn").click(() => $("#box").fadeIn());
+      $("#slideUp").click(() => $("#box").slideUp());
+      $("#slideDown").click(() => $("#box").slideDown());
+    });
+  </script>
+
+</body>
+</html>

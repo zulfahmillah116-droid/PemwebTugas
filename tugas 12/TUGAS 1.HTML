@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop 1 - DOM Manipulation</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 350px;
+    }
+
+    #teks {
+      font-size: 20px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .btn-text {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .btn-color {
+      background-color: #2196f3;
+      color: white;
+    }
+
+    .btn-hide {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .btn-show {
+      background-color: #9c27b0;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <p id="teks">Halo semuanya!</p>
+
+    <button class="btn-text" onclick="ubahTeks()">Ubah Teks</button>
+    <button class="btn-color" onclick="ubahWarna()">Ubah Warna</button>
+    <button class="btn-hide" onclick="sembunyikan()">Sembunyikan</button>
+    <button class="btn-show" onclick="tampilkan()">Tampilkan</button>
+  </div>
+
+  <script>
+    function ubahTeks() {
+      document.getElementById("teks").innerHTML = "Teks berhasil diubah ✨";
+    }
+
+    function ubahWarna() {
+      document.getElementById("teks").style.color = "#ff5722";
+    }
+
+    function sembunyikan() {
+      document.getElementById("teks").style.display = "none";
+    }
+
+    function tampilkan() {
+      document.getElementById("teks").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
